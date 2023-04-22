@@ -12,7 +12,7 @@ public class Sponsor {
      @Column(name = "nom")
       private  String nom;
 
-     @Column(name="Spécialité")
+     @Column(name="specialite")
      private String specialite;
 
     public long getSponsor_id() {
@@ -97,7 +97,7 @@ public class Sponsor {
     @Column(name = "email")
     private  String email;
 
-     @Column(name = "adress")
+     @Column(name = "adresse")
       private String adresse;
 
      @Column(name="telephone")

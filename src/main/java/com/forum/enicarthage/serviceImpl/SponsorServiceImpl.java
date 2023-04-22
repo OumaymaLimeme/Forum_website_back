@@ -41,6 +41,6 @@ public class SponsorServiceImpl implements SponsorService {
         s.setSpecialite(sponsor.getSpecialite());
         s.setNom(sponsor.getNom());
         s.setType_package(sponsor.getType_package());
-        return null;
+        return sponsorRepository.save(s);
     }
 }

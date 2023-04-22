@@ -29,9 +29,9 @@ public class SponsorController {
     }
     // Update sponsor
     @PutMapping("/update-sponsor/{id}")
-    public Sponsor updateSponsorById(@PathVariable("id") long id,@RequestBody Sponsor entreprise)
+    public Sponsor updateSponsorById(@PathVariable("id") long id,@RequestBody Sponsor sponsor)
     {
-        return  sponsorService.updateSponsor(id,entreprise);
+        return  sponsorService.updateSponsor(id,sponsor);
     }
     //delete Entreprise bu id
     @DeleteMapping("/delete-sponsor/{id}")
