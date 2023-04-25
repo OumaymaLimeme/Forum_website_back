@@ -3,6 +3,8 @@ package com.forum.enicarthage.serviceImpl;
 import com.forum.enicarthage.Repository.StandsRepository;
 import com.forum.enicarthage.model.Stands;
 import com.forum.enicarthage.services.StandsService;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -10,6 +12,7 @@ import java.util.List;
 
 @Service
 public class StandsServiceImp implements StandsService {
+    private static final Logger logger = LogManager.getLogger(EntrepServiceImpl.class);
     @Autowired
     private StandsRepository standsRepository;
     @Override
@@ -19,11 +22,13 @@ public class StandsServiceImp implements StandsService {
 
     @Override
     public List<Stands> getStands() {
+        logger.info("Retrieving all Stands");
         return (List<Stands>)standsRepository.findAll();
     }
 
     @Override
     public Stands getStandsById(long id) {
+        logger.info("Retrieving stand with id {}", id);
         return standsRepository.findById((int) id).get();
     }
 
